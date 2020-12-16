@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
-import { LoginComponent } from '../components/login/login.component';
 
 @Injectable({
   providedIn: 'root'
@@ -27,15 +26,5 @@ export class TokenInterceptorService implements HttpInterceptor {
   }
 
 
-  // intercept(req, next) {
-  //   const tokenizedReq = req.clone({
-  //     setHeaders: {
-  //       Accept: 'application/json',
-  //       'Content-Type': 'application/json',
-  //       Authorization: `Bearer ${localStorage.getItem('token')}`
-  //     }
-  //   });
 
-  //   return next.handle(tokenizedReq);
-  // }
 }

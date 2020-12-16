@@ -44,7 +44,6 @@ export class WorkersComponent implements OnInit {
       res => {
         this.workersList = res.content
         this.totalItems = res.totalElements
-        console.log(res)
       }
     )
   }

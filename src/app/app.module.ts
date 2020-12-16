@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatMenuModule} from '@angular/material/menu';
 import { LoginModule } from './components/login/login/login.module';
 
 @NgModule({
@@ -39,7 +40,8 @@ import { LoginModule } from './components/login/login/login.module';
     MatCardModule, 
     MatToolbarModule,
     MatIconModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

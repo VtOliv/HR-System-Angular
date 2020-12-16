@@ -42,7 +42,6 @@ export class LoginComponent implements OnInit {
     this.auth.loginUser(this.userData)
       .subscribe(
         res => {
-          console.log(res)
           sessionStorage.setItem('access_token', res.access_token);
           this.router.navigate(['home']);
           sessionStorage.setItem('username', this.userData.username);

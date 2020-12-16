@@ -19,7 +19,7 @@ export class AuthService {
 
     let headers = new HttpHeaders({
       "Content-Type": "application/x-www-form-urlencoded",
-      "Accept": "application/json",
+      // "Accept": "application/json",
       "Authorization": "Basic " + btoa("myappname123" + ':' + "myappsecret123")
     });
 

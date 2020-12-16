@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
@@ -14,7 +14,7 @@ export class MsIntegrationService {
 
   workerAPI = `${this.apiUrl}/hr-worker/workers`
   paymentAPI = `${this.apiUrl}/hr-payroll/payments`
-
+  usersAPI = `${this.apiUrl}/hr-user/users`
 
   getWorkers():Observable<any>{
     return this.http.get(this.workerAPI)
@@ -22,6 +22,10 @@ export class MsIntegrationService {
 
   getWorkerById(id):Observable<any>{
     return this.http.get<any[]>(`${this.workerAPI}/${id}`)
+  }
+
+  getUserById(email):Observable<any>{
+    return this.http.get<any[]>(`${this.usersAPI}/search?email=${email}`)
   }
 
   getWorkerPayment(id,days):Observable<any>{

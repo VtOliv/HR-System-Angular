@@ -5,21 +5,22 @@
         </button>
         <span class="focus-in-expand">Human Resources Admin System</span>
         <span class="example-spacer"></span>
-        <button mat-icon-button routerLink="/login" class="logout" aria-label="Example icon-button with menu icon">
-           Logout <mat-icon>exit_to_app</mat-icon>
+        <button mat-icon-button [matMenuTriggerFor]="menu" class="logout" aria-label="Example icon-button with menu icon">
+          Bem vindo, {{UserName}} <mat-icon>exit_to_app</mat-icon>
         </button>
+
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink='/login'>Logout</button>
+        </mat-menu>
     </mat-toolbar>
 </p>
 
 <mat-tab-group mat-align-tabs="center">
+    
     <mat-tab label="Workers">
         <app-workers></app-workers>
     </mat-tab>
     <mat-tab label="Payment">
         <app-payment></app-payment>
     </mat-tab>
-
-    <!-- <mat-tab label="Login">
-        <app-login></app-login>
-    </mat-tab> -->
 </mat-tab-group>

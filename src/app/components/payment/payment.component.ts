@@ -9,6 +9,8 @@ import { MsIntegrationService } from 'src/app/services/ms-integration.service';
 })
 export class PaymentComponent implements OnInit {
 
+  workerId: number
+  days: number
   info: boolean = false
   teste: boolean = false
 
@@ -40,8 +42,7 @@ export class PaymentComponent implements OnInit {
 
   getWorkerPayment() {
     this.info = true
-
-    this.serv.getWorkerPaymentAlt(this.formRequest).subscribe(
+    this.serv.getWorkerPayment(this.workerId,this.days).subscribe(
       res => {
         this.workerData.splice(0, 1)
         this.workerData.push(res)
