@@ -1,0 +1,25 @@
+<p>
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>assignment_ind</mat-icon>
+        </button>
+        <span class="focus-in-expand">Human Resources Admin System</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button routerLink="/login" class="logout" aria-label="Example icon-button with menu icon">
+           Logout <mat-icon>exit_to_app</mat-icon>
+        </button>
+    </mat-toolbar>
+</p>
+
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Workers">
+        <app-workers></app-workers>
+    </mat-tab>
+    <mat-tab label="Payment">
+        <app-payment></app-payment>
+    </mat-tab>
+
+    <!-- <mat-tab label="Login">
+        <app-login></app-login>
+    </mat-tab> -->
+</mat-tab-group>

@@ -1,0 +1,28 @@
+<div class="formWorker">
+    <mat-form-field appearance="fill">
+        <mat-label>Worker ID</mat-label>
+        <input matInput name="workerId" (keypress)="cancelarLetras($event)" type="number" [(ngModel)]="workerId"
+            (input)="workerId">
+    </mat-form-field>
+</div>
+
+<div class="formWorker">
+    <button mat-raised-button color="primary" (click)="showWorkers()">Show Worker</button>
+</div>
+<div class="holder">
+
+
+    <div class="cards" *ngIf="info">
+        <div class="pages">
+            <mat-paginator (page)="pageChange($event)" [length]="totalItems" [pageSize]="10">
+            </mat-paginator>
+        </div>
+
+        <mat-card *ngFor="let worker of workersList">
+            <h4>Name: {{worker.name}}</h4>
+            <strong>Id : {{worker.id}}</strong><br>
+            <strong>Daily Income : {{worker.dailyIncome}}</strong>
+        </mat-card>
+
+    </div>
+</div>

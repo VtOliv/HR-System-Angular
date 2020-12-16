@@ -1,0 +1,30 @@
+<div class="halfScreen">
+
+
+    <img src="./assets/logo.png" class="imgBrand"/>
+    <h1 class="Brand">Human Resources</h1>
+    <h2 class="phrase">Admin System</h2>
+
+<div class="loginBody">
+
+    <p-toast position="top-right"></p-toast>
+
+    <mat-card>
+        <img src="./assets/logo.png" class="logo"/>
+
+        <h1>Welcome !</h1>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Login</mat-label>
+            <input matInput [(ngModel)]="userData.username" (input)="userData.username" name="username">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [(ngModel)]="userData.password" (input)="userData.password" name="password">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="loginUser()">Sign-in</button>
+    </mat-card>
+</div>
+</div>

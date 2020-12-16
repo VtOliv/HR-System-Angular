@@ -1,0 +1,37 @@
+mat-form-field {
+    margin: 10px;
+}
+
+mat-card {
+    width: 200px;
+    box-shadow: 1px 2px 7px gray !important;
+    margin: 10px;
+}
+
+mat-card:hover {
+    background-color: lightgray;
+    transition: 2s;
+}
+
+.formWorker {
+    display: flex;
+    justify-content: center;
+}
+
+.holder {
+    display: flex;
+    justify-content: center;
+}
+
+.pages {
+    width: 100%;
+}
+
+.cards {
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

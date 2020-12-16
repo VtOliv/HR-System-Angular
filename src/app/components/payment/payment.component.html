@@ -1,0 +1,31 @@
+<div class="formPayroll">
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>Worker ID</mat-label>
+        <input matInput (keypress)="cancelarLetras($event)" name="workerId" [(ngModel)]="formRequest.workerId" (input)="formRequest.workerId">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Days Worked</mat-label>
+        <input matInput (keypress)="cancelarLetras($event)" name="days" [(ngModel)]="formRequest.days" (input)="formRequest.days">
+    </mat-form-field>
+
+</div>
+<div class="formPayroll">
+    <button mat-raised-button color="primary" (click)="getWorkerPayment()">Show Payment</button>
+</div>
+
+<div class="cards" *ngIf="info">
+    <mat-card *ngFor="let worker of workerData">
+        <mat-card-header>
+            <h4><strong>Worker Name: </strong>{{worker.name}}</h4>
+        </mat-card-header>
+        <strong>Daily Income : {{worker.dailyIncome}}</strong><br>
+        <strong>Days Worked : {{worker.days}}</strong>
+        <mat-card-footer>
+            <h4>Total received : {{worker.total}}</h4>
+        </mat-card-footer>
+
+    </mat-card>
+</div>
