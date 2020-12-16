@@ -1,5 +1,7 @@
-# AppMsFront
+# HR System Angular
 
+This project was made for practice only .
+The Backend for this project is a private repository , ask me if you want to get it.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
 ## Development server
